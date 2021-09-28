@@ -1,0 +1,696 @@
+.container-fluid {
+  padding: 0px;
+  margin: 0px;
+}
+
+.parent {
+  width: 25%;
+  height: 600px;
+  border: 15px solid #0a0a0a;
+  margin-left: 40px;
+  margin-top: 20px;
+  border-radius: 30px;
+  background-color: black;
+  position: relative;
+  overflow-wrap: inherit;
+}
+.parent .power {
+  position: absolute;
+  width: 8px;
+  height: 28px;
+  background-color: red;
+  border-radius: 0px 5px 5px 0px;
+  margin-left: 104%;
+  margin-top: 102px;
+}
+.parent .volume-up {
+  position: absolute;
+  width: 8px;
+  height: 28px;
+  background-color: red;
+  border-radius: 0px 5px 5px 0px;
+  margin-left: 104%;
+  margin-top: 40px;
+}
+.parent .volume-down {
+  position: absolute;
+  width: 8px;
+  height: 28px;
+  background-color: red;
+  border-radius: 0px 5px 5px 0px;
+  margin-left: 104%;
+  margin-top: 68px;
+}
+
+.call-log {
+  background-color: whitesmoke;
+  margin-top: -6px;
+  border-radius: 30px !important;
+  width: 100%;
+  height: 580px;
+  position: absolute;
+  z-index: 1000;
+}
+.call-log .camera {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background-color: gray;
+  margin-left: 4%;
+  margin-top: 4px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.call-log .camera::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: black;
+}
+.call-log header {
+  display: flex;
+  align-items: center;
+  background-color: #4ec44e;
+  color: white;
+  padding-bottom: 2px;
+  border-radius: 15px 15px 0px 0px;
+}
+.call-log header .mean .camera {
+  margin-left: 6px;
+}
+.call-log header .mean2 {
+  padding-left: 65%;
+}
+.call-log .contact-main {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid lightgrey;
+  padding-bottom: 3px;
+  background-color: white;
+}
+.call-log .contact-main .bay {
+  padding-left: 5px;
+}
+.call-log .contact-main .dem {
+  border: none !important;
+  background-color: white;
+}
+.call-log .contact-main .dem .fa-arrow-left {
+  font-size: 12px;
+}
+.call-log .fill {
+  display: flex;
+  align-items: center;
+}
+.call-log .fill .cir {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: greenyellow;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+}
+.call-log .fill .dim {
+  padding-left: 145px;
+  padding-top: -30px;
+}
+.call-log .fill .cir2 {
+  color: green;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid green;
+}
+.call-log .fill2 {
+  display: flex;
+  align-items: center;
+}
+.call-log .fill2 .cir {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: green;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+}
+.call-log .fill2 .dim {
+  padding-left: 125px;
+  padding-top: -30px;
+}
+.call-log .fill2 .cir2 {
+  color: green;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid green;
+}
+.call-log .fill3 {
+  display: flex;
+  align-items: center;
+}
+.call-log .fill3 .cir {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: blue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+}
+.call-log .fill3 .dim {
+  padding-left: 130px;
+  padding-top: -30px;
+}
+.call-log .fill3 .cir2 {
+  color: green;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid green;
+}
+.call-log .firm {
+  padding-top: 10px;
+  position: absolute;
+  z-index: -1000;
+  overflow-y: scroll;
+  height: 450px;
+}
+.call-log .contact {
+  background-color: lightgrey;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  padding: 2px;
+  border-radius: 15px;
+}
+.call-log .contact input {
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+.call-log .tip {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: green;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  margin-left: 10%;
+  color: white;
+  bottom: 120px !important;
+}
+.call-log .foot {
+  display: flex;
+  justify-content: space-around;
+  bottom: 55px !important;
+  border-radius: 0px 0px 15px 15px;
+  position: fixed;
+  height: 50px;
+  width: 22.7%;
+  background-color: white;
+  padding-top: -40px;
+}
+.call-log .foot .bay {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-size: 12px;
+}
+
+.grand-panel {
+  background-color: whitesmoke;
+  margin-top: -70px !important;
+  border-radius: 20px;
+  width: 100%;
+  height: 580px;
+  position: absolute;
+  z-index: 1000;
+}
+.grand-panel header {
+  display: flex;
+  align-items: center;
+}
+.grand-panel header .mean .camera {
+  margin-left: 6px;
+}
+.grand-panel header .mean2 {
+  padding-left: 65%;
+}
+.grand-panel .bay {
+  padding-left: 10px;
+}
+.grand-panel .dem {
+  border: none !important;
+  border-color: whitesmoke;
+}
+.grand-panel .dem .fa-arrow-left {
+  font-size: 12px;
+}
+.grand-panel .camera {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background-color: gray;
+  margin-left: 4%;
+  margin-top: 4px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.grand-panel .camera::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: black;
+}
+.grand-panel #card {
+  position: absolute;
+  width: 90%;
+  background-color: black;
+  color: white;
+  margin-left: 10%;
+  border-radius: 10px;
+  padding: 10px;
+}
+.grand-panel .grand-panel2 {
+  margin-left: 10px;
+  margin-top: -7%;
+  padding-top: 220px;
+}
+.grand-panel .grand-panel2 .panel-fill {
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  background-color: whitesmoke;
+  border-bottom: 1px solid lightgrey;
+}
+.grand-panel .grand-panel2 .panel-fill #panel {
+  padding-left: 10px;
+  font-size: 20px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+.grand-panel .grand-panel2 .panel-fill .day {
+  margin-left: 20%;
+  color: white;
+  background-color: green;
+  padding: 5px;
+  border-radius: 50% 100% 100% 100%;
+  position: fixed;
+  padding: 5px;
+  top: 45%;
+}
+.grand-panel .grand-panel2 .panel-fill .dey {
+  color: green;
+  margin-left: 5%;
+}
+.grand-panel .grand-panel2 .bill {
+  display: flex;
+  justify-content: center;
+}
+.grand-panel .grand-panel2 .bill i {
+  color: white;
+  background-color: green;
+  padding: 10px;
+  border-radius: 50%;
+  font-size: 22px;
+  margin: auto;
+}
+.grand-panel .grand-panel2 button {
+  width: 30%;
+  height: 50px;
+  margin: 2px;
+  border: none;
+  background-color: transparent;
+}
+.grand-panel .grand-panel2 button:focus {
+  background-color: lightgray;
+}
+
+.homepage {
+  margin-top: -5px;
+  border-radius: 20px;
+  width: 100%;
+  height: 580px;
+  position: absolute;
+  background-image: url("winnipeg-manitoba.jpg");
+}
+.homepage header {
+  display: flex;
+  align-items: center;
+}
+.homepage header .mean .camera {
+  margin-left: 6px;
+}
+.homepage header .mean2 {
+  padding-left: 65%;
+}
+.homepage header .mean2 .sig {
+  color: white;
+}
+.homepage header .mean2 .bat {
+  color: white;
+}
+.homepage .camera {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background-color: gray;
+  margin-left: 4%;
+  margin-top: 4px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.homepage .camera::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: black;
+}
+.homepage footer {
+  bottom: 0px;
+}
+.homepage footer .foot {
+  bottom: 0px;
+  margin-top: 151%;
+  display: flex;
+  justify-content: space-around;
+}
+.homepage footer .foot .box-phone, .homepage footer .foot .box {
+  background-color: #2b8682;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 30px;
+}
+
+.dial {
+  background-color: royalblue;
+  margin-top: -73px !important;
+  border-radius: 20px;
+  width: 100%;
+  height: 583px;
+  position: absolute;
+  z-index: 1000;
+}
+.dial header {
+  display: flex;
+  align-items: center;
+  background-color: royalblue;
+}
+.dial header .mean .camera {
+  margin-left: 6px;
+}
+.dial header .mean2 {
+  padding-left: 65%;
+}
+.dial header .mean2 .sig {
+  color: white;
+}
+.dial header .mean2 .bat {
+  color: white;
+}
+.dial .camera {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background-color: gray;
+  margin-left: 4%;
+  margin-top: 4px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dial .camera::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: black;
+}
+.dial .line-one {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  padding-top: 30px;
+}
+.dial .line-one .user {
+  font-size: 40px;
+  width: 60px;
+  height: 60px;
+  padding: 30px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 2px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.dial .line-one .one {
+  width: 10px;
+  height: 20px;
+  padding: 5px;
+  margin-top: 10px;
+  border-radius: 0px 8px 0px 0px;
+  display: flex;
+  border: 1px solid white;
+  align-items: center;
+  justify-content: center;
+  column-count: 3 !important;
+}
+.dial .team {
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 30px;
+}
+.dial .team .file {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.dial .team .file p {
+  font-size: 12px;
+}
+.dial .team .file i {
+  font-size: 22px;
+}
+.dial .phone {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: red;
+  color: white;
+  font-size: 25px;
+  margin-left: 45%;
+  margin-top: 260px;
+}
+
+.msg {
+  background-color: whitesmoke;
+  margin-top: -70px !important;
+  border-radius: 20px;
+  width: 100%;
+  height: 580px;
+  position: absolute;
+  z-index: 1000;
+}
+.msg header {
+  display: flex;
+  align-items: center;
+}
+.msg header .mean .camera {
+  margin-left: 6px;
+}
+.msg header .mean2 {
+  padding-left: 65%;
+}
+.msg header .mean2 .sig {
+  color: white;
+}
+.msg header .mean2 .bat {
+  color: white;
+}
+.msg #msg-screen {
+  position: absolute;
+  bottom: 20%;
+  margin-left: 5px;
+}
+.msg .view-msg {
+  width: fit-content !important;
+  height: fit-content;
+  max-width: 80%;
+  padding: 5px;
+  border-radius: 10px;
+  padding-left: 10px !important;
+  background-color: lightgray;
+  margin-bottom: 5px;
+}
+.msg .view-msg p {
+  margin-bottom: 5px;
+}
+.msg footer {
+  position: fixed;
+  bottom: 50px;
+  margin-left: 20px;
+}
+.msg footer textarea {
+  background-color: transparent;
+  border-radius: 5px;
+  outline: 0px;
+}
+.msg footer .right {
+  background-color: green;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: white;
+  margin-left: 10px;
+}
+
+.parent2 {
+  background-color: #41f041;
+  width: 450px;
+  height: 500px;
+  margin-left: 150% !important;
+  margin-top: 10%;
+  padding-top: 20px;
+  border-radius: 10px;
+}
+.parent2 table, .parent2 th, .parent2 tr, .parent2 td {
+  border: 2px solid black;
+  border-collapse: collapse;
+  padding: 2px 5px;
+}
+.parent2 table {
+  margin-top: 10px !important;
+  width: 400px;
+  margin: auto;
+}
+.parent2 th {
+  margin-top: 30px;
+  background-color: #24a824;
+  color: white;
+}
+
+@media (max-width: 900px) {
+  .parent {
+    width: 100% !important;
+  }
+}
+@media (max-width: 760px) {
+  .container-fluid {
+    padding: 0px !important;
+    margin: 0px !important;
+  }
+
+  .parent {
+    border: none !important;
+    border-radius: 0px !important;
+    width: 100%;
+    margin: 0px;
+  }
+  .parent .side {
+    display: none;
+  }
+  .parent .power2 {
+    position: absolute;
+    width: 6px;
+    height: 28px;
+    background-color: red;
+    border-radius: 0px 5px 5px 0px;
+    margin-top: 102px;
+  }
+
+  .grand-panel {
+    width: 100%;
+    border-radius: 0px !important;
+  }
+  .grand-panel .panel-fill .day {
+    margin-left: 70%;
+  }
+  .grand-panel .grand-panel2 .day {
+    margin-left: 80% !important;
+    margin-top: -20px !important;
+  }
+
+  .call-log {
+    border-radius: 0px !important;
+  }
+  .call-log .fill .dim {
+    padding-left: 190px;
+  }
+  .call-log .fill2 .dim {
+    padding-left: 170px;
+  }
+  .call-log .fill3 .dim {
+    padding-left: 180px;
+  }
+  .call-log .tip {
+    margin-left: 50%;
+  }
+  .call-log .foot {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .parent2 {
+    background-color: #41f041;
+    width: 100% !important;
+    margin-left: 0px !important;
+    position: absolute;
+    margin-top: 650px;
+    padding-top: 20px;
+    border-radius: 10px;
+    padding-left: 10px;
+  }
+}
+
+/*# sourceMappingURL=phone.css.map */

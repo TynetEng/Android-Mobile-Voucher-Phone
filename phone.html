@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="phone.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Android Phone</title>
+</head>
+<body>
+
+
+    <div class="container-fluid">
+        <div class="parent" id="parent">
+            <div class="side">
+                
+                <div class="volume-up"></div>
+                <div class="volume-down"></div>
+                <div class="power" onclick="on('on')" ondblclick="off()"></div>
+            </div>
+            <div class="power2" onclick="on('on')"></div>
+            <div hidden class="homepage" id="home">
+                <header class="d-flex">
+                    
+                    <div class="mean d-flex">
+                        <div class="camera"></div>
+                        <h6 id="time" class="d-flex"></h6>
+                    </div>
+                    <div class="d-flex mean2">
+                        <i class="fa fa-signal sig px-2"></i>
+                        <i class="fa fa-signal sig"></i>
+                        <i class="fa fa-battery-full px-2 bat"></i>
+                    </div>
+                </header>
+                <div>
+                    <a href="">
+                        <div><i class="fa"></i></div>
+                    </a>
+                </div>
+                <footer>
+                    <div class="d-flex foot" >
+                        <div class="box-phone" onclick="callLogDisplay('call')">
+                            <i class="fa fa-phone"></i>
+                        </div>
+                        <div class="box" onclick="displayMessage()">
+                            <i class="fa fa-commenting-o"></i>
+                        </div>
+                        <div class="box">
+                            <i class="fa fa-chrome"></i>
+                        </div>
+                        <div class="box">
+                            <i class="fa fa-photo"></i>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+
+            <div hidden class="call-log" id="callLog">
+                <div style="position: sticky; top: 0px;">
+                    <header class="d-flex">
+                        <div class="mean d-flex">
+                            <div class="camera"></div>
+                            <h6 id="time"></h6>
+                        </div>
+                        <div class="d-flex mean2">
+                            <i class="fa fa-signal sig px-2"></i>
+                            <i class="fa fa-signal sig"></i>
+                            <i class="fa fa-battery-full px-2 bat"></i>
+                        </div>
+                    </header>
+                    <div>
+                        <div class="contact-main">
+                            <div>
+                                <button class="dem" onclick="backCall('call')"><i class="fa fa-arrow-left px-2"></i></button>
+                            </div>
+                            <div class="contact">
+                                <i class="fa fa-search px-2"></i>
+                                <input type="text" placeholder="Search contacts">
+                                <i class="fa fa-microphone px-3"></i>
+                            </div>
+                            <div class="d-flex">
+                                <i class="fa fa-ellipsis-v bay"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="firm">
+                    <h6 class="px-2 py-2">TODAY</h6>
+                    <div class="fill">
+                        <div>
+                            <h4 class="cir">T</h4>
+                        </div>
+                        <div style="line-height: 0.2;" class="px-2">
+                            <p>Tynet</p>
+                            <p style="font-size: 9px;"><span>1</span>
+                                <i class="fa fa-arrow-left"></i>
+                                <span>Mobile</span>
+                            </p>
+                        </div>
+                        <div style="font-size: 9px;" class="dim">
+                            <p><span>1 hr.ago</span>
+                                <span class="cir2">i</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="fill2 py-2 border-top">
+                        <div>
+                            <h4 class="cir">M</h4>
+                        </div>
+                        <div style="line-height: 0.2;" class="px-2">
+                            <p>Mayokun</p>
+                            <p style="font-size: 9px;"><span>1</span>
+                                <i class="fa fa-arrow-left"></i>
+                                <span>Mobile</span>
+                            </p>
+                        </div>
+                        <div style="font-size: 9px;" class="dim">
+                            <p><span>2 hr.ago</span>
+                                <span class="cir2">i</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="fill3 py-2 border-top">
+                        <div>
+                            <h4 class="cir">T</h4>
+                        </div>
+                        <div style="line-height: 0.2;" class="px-2">
+                            <p>Tofunmi</p>
+                            <p style="font-size: 9px;"><span>1</span>
+                                <i class="fa fa-arrow-left"></i>
+                                <span>Mobile</span>
+                            </p>
+                        </div>
+                        <div style="font-size: 9px;" class="dim">
+                            <p><span>3 hr.ago</span>
+                                <span class="cir2">i</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="fill">
+                        <div>
+                            <h4 class="cir">T</h4>
+                        </div>
+                        <div style="line-height: 0.2;" class="px-2">
+                            <p>Tynet</p>
+                            <p style="font-size: 9px;"><span>1</span>
+                                <i class="fa fa-arrow-left"></i>
+                                <span>Mobile</span>
+                            </p>
+                        </div>
+                        <div style="font-size: 9px;" class="dim">
+                            <p><span>1 hr.ago</span>
+                                <span class="cir2">i</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="fill2 py-2 border-top">
+                        <div>
+                            <h4 class="cir">M</h4>
+                        </div>
+                        <div style="line-height: 0.2;" class="px-2">
+                            <p>Mayokun</p>
+                            <p style="font-size: 9px;"><span>1</span>
+                                <i class="fa fa-arrow-left"></i>
+                                <span>Mobile</span>
+                            </p>
+                        </div>
+                        <div style="font-size: 9px;" class="dim">
+                            <p><span>2 hr.ago</span>
+                                <span class="cir2">i</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="fill3 py-2 border-top">
+                        <div>
+                            <h4 class="cir">T</h4>
+                        </div>
+                        <div style="line-height: 0.2;" class="px-2">
+                            <p>Tofunmi</p>
+                            <p style="font-size: 9px;"><span>1</span>
+                                <i class="fa fa-arrow-left"></i>
+                                <span>Mobile</span>
+                            </p>
+                        </div>
+                        <div style="font-size: 9px;" class="dim">
+                            <p><span>3 hr.ago</span>
+                                <span class="cir2">i</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="fill">
+                        <div>
+                            <h4 class="cir">T</h4>
+                        </div>
+                        <div style="line-height: 0.2;" class="px-2">
+                            <p>Tynet</p>
+                            <p style="font-size: 9px;"><span>1</span>
+                                <i class="fa fa-arrow-left"></i>
+                                <span>Mobile</span>
+                            </p>
+                        </div>
+                        <div style="font-size: 9px;" class="dim">
+                            <p><span>1 hr.ago</span>
+                                <span class="cir2">i</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="fill2 py-2 border-top">
+                        <div>
+                            <h4 class="cir">M</h4>
+                        </div>
+                        <div style="line-height: 0.2;" class="px-2">
+                            <p>Mayokun</p>
+                            <p style="font-size: 9px;"><span>1</span>
+                                <i class="fa fa-arrow-left"></i>
+                                <span>Mobile</span>
+                            </p>
+                        </div>
+                        <div style="font-size: 9px;" class="dim">
+                            <p><span>2 hr.ago</span>
+                                <span class="cir2">i</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="fill3 py-2 border-top">
+                        <div>
+                            <h4 class="cir">T</h4>
+                        </div>
+                        <div style="line-height: 0.2;" class="px-2">
+                            <p>Tofunmi</p>
+                            <p style="font-size: 9px;"><span>1</span>
+                                <i class="fa fa-arrow-left"></i>
+                                <span>Mobile</span>
+                            </p>
+                        </div>
+                        <div style="font-size: 9px;" class="dim">
+                            <p><span>3 hr.ago</span>
+                                <span class="cir2">i</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="fill">
+                        <div>
+                            <h4 class="cir">T</h4>
+                        </div>
+                        <div style="line-height: 0.2;" class="px-2">
+                            <p>Tynet</p>
+                            <p style="font-size: 9px;"><span>1</span>
+                                <i class="fa fa-arrow-left"></i>
+                                <span>Mobile</span>
+                            </p>
+                        </div>
+                        <div style="font-size: 9px;" class="dim">
+                            <p><span>1 hr.ago</span>
+                                <span class="cir2">i</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="fill2 py-2 border-top">
+                        <div>
+                            <h4 class="cir">M</h4>
+                        </div>
+                        <div style="line-height: 0.2;" class="px-2">
+                            <p>Mayokun</p>
+                            <p style="font-size: 9px;"><span>1</span>
+                                <i class="fa fa-arrow-left"></i>
+                                <span>Mobile</span>
+                            </p>
+                        </div>
+                        <div style="font-size: 9px;" class="dim">
+                            <p><span>2 hr.ago</span>
+                                <span class="cir2">i</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="fill3 py-2 border-top">
+                        <div>
+                            <h4 class="cir">T</h4>
+                        </div>
+                        <div style="line-height: 0.2;" class="px-2">
+                            <p>Tofunmi</p>
+                            <p style="font-size: 9px;"><span>1</span>
+                                <i class="fa fa-arrow-left"></i>
+                                <span>Mobile</span>
+                            </p>
+                        </div>
+                        <div style="font-size: 9px;" class="dim">
+                            <p><span>3 hr.ago</span>
+                                <span class="cir2">i</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="fill">
+                        <div>
+                            <h4 class="cir">T</h4>
+                        </div>
+                        <div style="line-height: 0.2;" class="px-2">
+                            <p>Tynet</p>
+                            <p style="font-size: 9px;"><span>1</span>
+                                <i class="fa fa-arrow-left"></i>
+                                <span>Mobile</span>
+                            </p>
+                        </div>
+                        <div style="font-size: 9px;" class="dim">
+                            <p><span>1 hr.ago</span>
+                                <span class="cir2">i</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="fill2 py-2 border-top">
+                        <div>
+                            <h4 class="cir">M</h4>
+                        </div>
+                        <div style="line-height: 0.2;" class="px-2">
+                            <p>Mayokun</p>
+                            <p style="font-size: 9px;"><span>1</span>
+                                <i class="fa fa-arrow-left"></i>
+                                <span>Mobile</span>
+                            </p>
+                        </div>
+                        <div style="font-size: 9px;" class="dim">
+                            <p><span>2 hr.ago</span>
+                                <span class="cir2">i</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="fill3 py-2 border-top">
+                        <div>
+                            <h4 class="cir">T</h4>
+                        </div>
+                        <div style="line-height: 0.2;" class="px-2">
+                            <p>Tofunmi</p>
+                            <p style="font-size: 9px;"><span>1</span>
+                                <i class="fa fa-arrow-left"></i>
+                                <span>Mobile</span>
+                            </p>
+                        </div>
+                        <div style="font-size: 9px;" class="dim">
+                            <p><span>3 hr.ago</span>
+                                <span class="cir2">i</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="fill">
+                        <div>
+                            <h4 class="cir">T</h4>
+                        </div>
+                        <div style="line-height: 0.2;" class="px-2">
+                            <p>Tynet</p>
+                            <p style="font-size: 9px;"><span>1</span>
+                                <i class="fa fa-arrow-left"></i>
+                                <span>Mobile</span>
+                            </p>
+                        </div>
+                        <div style="font-size: 9px;" class="dim">
+                            <p><span>1 hr.ago</span>
+                                <span class="cir2">i</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="fill2 py-2 border-top">
+                        <div>
+                            <h4 class="cir">M</h4>
+                        </div>
+                        <div style="line-height: 0.2;" class="px-2">
+                            <p>Mayokun</p>
+                            <p style="font-size: 9px;"><span>1</span>
+                                <i class="fa fa-arrow-left"></i>
+                                <span>Mobile</span>
+                            </p>
+                        </div>
+                        <div style="font-size: 9px;" class="dim">
+                            <p><span>2 hr.ago</span>
+                                <span class="cir2">i</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="fill3 py-2 border-top">
+                        <div>
+                            <h4 class="cir">T</h4>
+                        </div>
+                        <div style="line-height: 0.2;" class="px-2">
+                            <p>Tofunmi</p>
+                            <p style="font-size: 9px;"><span>1</span>
+                                <i class="fa fa-arrow-left"></i>
+                                <span>Mobile</span>
+                            </p>
+                        </div>
+                        <div style="font-size: 9px;" class="dim">
+                            <p><span>3 hr.ago</span>
+                                <span class="cir2">i</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="fill">
+                        <div>
+                            <h4 class="cir">T</h4>
+                        </div>
+                        <div style="line-height: 0.2;" class="px-2">
+                            <p>Tynet</p>
+                            <p style="font-size: 9px;"><span>1</span>
+                                <i class="fa fa-arrow-left"></i>
+                                <span>Mobile</span>
+                            </p>
+                        </div>
+                        <div style="font-size: 9px;" class="dim">
+                            <p><span>1 hr.ago</span>
+                                <span class="cir2">i</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="fill2 py-2 border-top">
+                        <div>
+                            <h4 class="cir">M</h4>
+                        </div>
+                        <div style="line-height: 0.2;" class="px-2">
+                            <p>Mayokun</p>
+                            <p style="font-size: 9px;"><span>1</span>
+                                <i class="fa fa-arrow-left"></i>
+                                <span>Mobile</span>
+                            </p>
+                        </div>
+                        <div style="font-size: 9px;" class="dim">
+                            <p><span>2 hr.ago</span>
+                                <span class="cir2">i</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="fill3 py-2 border-top">
+                        <div>
+                            <h4 class="cir">T</h4>
+                        </div>
+                        <div style="line-height: 0.2;" class="px-2">
+                            <p>Tofunmi</p>
+                            <p style="font-size: 9px;"><span>1</span>
+                                <i class="fa fa-arrow-left"></i>
+                                <span>Mobile</span>
+                            </p>
+                        </div>
+                        <div style="font-size: 9px;" class="dim">
+                            <p><span>3 hr.ago</span>
+                                <span class="cir2">i</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="fill">
+                        <div>
+                            <h4 class="cir">T</h4>
+                        </div>
+                        <div style="line-height: 0.2;" class="px-2">
+                            <p>Tynet</p>
+                            <p style="font-size: 9px;"><span>1</span>
+                                <i class="fa fa-arrow-left"></i>
+                                <span>Mobile</span>
+                            </p>
+                        </div>
+                        <div style="font-size: 9px;" class="dim">
+                            <p><span>1 hr.ago</span>
+                                <span class="cir2">i</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="fill2 py-2 border-top">
+                        <div>
+                            <h4 class="cir">M</h4>
+                        </div>
+                        <div style="line-height: 0.2;" class="px-2">
+                            <p>Mayokun</p>
+                            <p style="font-size: 9px;"><span>1</span>
+                                <i class="fa fa-arrow-left"></i>
+                                <span>Mobile</span>
+                            </p>
+                        </div>
+                        <div style="font-size: 9px;" class="dim">
+                            <p><span>2 hr.ago</span>
+                                <span class="cir2">i</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="fill3 py-2 border-top">
+                        <div>
+                            <h4 class="cir">T</h4>
+                        </div>
+                        <div style="line-height: 0.2;" class="px-2">
+                            <p>Tofunmi</p>
+                            <p style="font-size: 9px;"><span>1</span>
+                                <i class="fa fa-arrow-left"></i>
+                                <span>Mobile</span>
+                            </p>
+                        </div>
+                        <div style="font-size: 9px;" class="dim">
+                            <p><span>3 hr.ago</span>
+                                <span class="cir2">i</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tip" onclick="dailNumber('number')">
+                    <i class="fa fa-th"></i>
+                </div>
+                <footer class="p-2 border-top foot">
+                    <div class="bay">
+                        <i class="fa fa-clock-o"></i>
+                        <p>My Recents</p> 
+                    </div>
+                    <div class="bay">
+                        <i class="fa fa-star"></i>
+                        <p>My Center</p>
+                    </div>
+                    <div class="bay">
+                        <i class="fa fa-star"></i>
+                        <p>My Center</p>
+                    </div>
+                </footer>
+            <div hidden class="grand-panel" id="grand">
+                
+                <header class="d-flex">
+                    <div class="mean d-flex">
+                        <div class="camera"></div>
+                        <h6 id="time"></h6>
+                    </div>
+                    <div class="d-flex mean2">
+                        <i class="fa fa-signal sig px-2"></i>
+                        <i class="fa fa-signal sig"></i>
+                        <i class="fa fa-battery-full px-2 bat"></i>
+                    </div>
+                </header>
+                <div onclick="backCallLog('call')">
+                    <button class="dem"><i class="fa fa-arrow-left px-2"></i></button>
+                </div>
+                <div id="card" hidden></div>
+                <div class="grand-panel2">
+                    <div class="panel-fill">
+                        <div class="dey">
+                            <i class="fa fa-ellipsis-v"></i>
+                        </div>
+                        <div id="panel" contenteditable="true"></div>
+                        <div class="day">
+                            <i class="fa fa-close"></i>
+                        </div>
+                    </div>
+                    <div class="panel2">
+                        <div>
+                            <button onclick="number(1)">1</button>
+                            <button onclick="number(2)">2</button>
+                            <button onclick="number(3)">3</button>
+                        </div>
+                        <div>
+                            <button onclick="number(4)">4</button>
+                            <button onclick="number(5)">5</button>
+                            <button onclick="number(6)">6</button>
+                        </div>
+                        <div>
+                            <button onclick="number(7)">7</button>
+                            <button onclick="number(8)">8</button>
+                            <button onclick="number(9)">9</button>
+                        </div>
+                        <div>
+                            <button onclick="number('*')">*</button>
+                            <button onclick="number(0)">0</button>
+                            <button onclick="number('#')">#</button>
+                        </div>
+                    </div>
+                    <div class="d-flex bill">
+                        <div onclick="load('one')" class="me-3">
+                            <i class="fa fa-phone"></i>
+                        </div>
+                        <div onclick="load('two')">
+                            <i class="fa fa-phone"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div hidden class="dial" id="dial-one">
+                <header class="d-flex">
+                    <div class="mean d-flex">
+                        <div class="camera"></div>
+                        <h6 id="time"></h6>
+                    </div>
+                    <div class="d-flex mean2">
+                        <i class="fa fa-signal sig px-2"></i>
+                        <i class="fa fa-signal sig"></i>
+                        <i class="fa fa-battery-full px-2 bat"></i>
+                    </div>
+                </header>
+
+                <div class="line-one">
+                    <div class="user">
+                        <i class="fa fa-user-o"></i>
+                    </div>
+                    <div>
+                        <h4 id="called-number" oninput="inputOne('one')"></h4>
+                    </div>
+                    <div class="one">
+                        <span>1</span>
+                    </div>
+                </div>
+                <div class="team">
+                    <div class="file">
+                        <i class="fa fa-microphone-slash"></i>
+                        <p>Mute</p>
+                    </div>
+                    <div class="file">
+                        <i class="fa fa-building-o"></i>
+                        <p>Keypad</p>
+                    </div>
+                    <div class="file">
+                        <i class="fa fa-volume-up"></i>
+                        <p>Speaker</p>
+                    </div>
+                    <div class="file">
+                        <i class="fa fa-plus"></i>
+                        <p>Add Call</p>
+                    </div>
+                </div>
+                <div class="phone" onclick="endCallOne('one')">
+                    <i class="fa fa-phone"></i>
+                </div>
+            </div>
+            <div hidden class="dial" id="dial-two">
+                <header class="d-flex">
+                    <div class="mean d-flex">
+                        <div class="camera"></div>
+                        <h6 id="time"></h6>
+                    </div>
+                    <div class="d-flex mean2">
+                        <i class="fa fa-signal sig px-2"></i>
+                        <i class="fa fa-signal sig"></i>
+                        <i class="fa fa-battery-full px-2 bat"></i>
+                    </div>
+                </header>
+
+                <div class="line-one">
+                    <div class="user">
+                        <i class="fa fa-user-o"></i>
+                    </div>
+                    <div>
+                        <h3 id="called-number"></h3>
+                    </div>
+                    <div class="one">
+                        <span>2</span>
+                    </div>
+                </div>
+                <div class="team">
+                    <div class="file">
+                        <i class="fa fa-microphone-slash"></i>
+                        <p>Mute</p>
+                    </div>
+                    <div class="file">
+                        <i class="fa fa-building-o"></i>
+                        <p>Keypad</p>
+                    </div>
+                    <div class="file">
+                        <i class="fa fa-volume-up"></i>
+                        <p>Speaker</p>
+                    </div>
+                    <div class="file">
+                        <i class="fa fa-plus"></i>
+                        <p>Add Call</p>
+                    </div>
+                </div>
+                <div class="phone" onclick="endCallTwo('two')">
+                    <i class="fa fa-phone"></i>
+                </div>
+            </div>
+            <div id="message" hidden class="msg">
+                <header class="d-flex">
+                    <div class="mean d-flex">
+                        <div class="camera"></div>
+                        <h6 id="time"></h6>
+                    </div>
+                    <div class="d-flex mean2">
+                        <i class="fa fa-signal sig px-2"></i>
+                        <i class="fa fa-signal sig"></i>
+                        <i class="fa fa-battery-full px-2 bat"></i>
+                    </div>
+                </header>
+                <div id="msg-screen"></div>
+                <footer class="d-flex">
+                    <div><textarea name="" id="text" cols="30" rows="1"></textarea></div>
+                    <div class="right" onclick="send()"><i class="fa fa-arrow-right px-2"></i></div>
+                </footer>
+            </div>
+
+    </div>
+        <div class="parent2">
+            <!-- <div>
+                <input type="text" id="fill">
+                <button onclick="load(this.value)">LOAD</button>
+            </div> -->
+            <div>
+                <span>Recharge Your Airtime:</span>
+                <select name="" id="network">
+                    <option value="">Network</option>
+                </select>
+            
+                <select name="" id="amount">
+                    <option value="">Amount</option>
+                </select>
+                <input type="text" id="pin">
+        
+                <button onclick="gen(this.value)">Generate</button>
+                <button onclick="add(this.value)">PUSH</button>
+                
+            </div>
+            
+            <table id="table"></table>
+        </div>
+    
+        
+        <h3 id="screen"></h3>
+
+    <script>
+        let displayPhone = document.getElementById('grand');
+        let displayHome = document.getElementById('home');
+        let displayCallLog = document.getElementById('callLog');
+        let dialOne = document.getElementById('dial-one');
+        let dialTwo = document.getElementById('dial-two');
+        let displayNumber = document.getElementById('called-number');
+        let showMessage = document.getElementById('message');
+        let panel = document.getElementById('panel');
+        let inputMsg = document.getElementById('text');
+        let msgScreen = document.getElementById('msg-screen');
+        let newVoucherArr = [];
+        let table = document.getElementById('table');
+        voucher = [{name: 'MTN', value : ['100','200','500','1000'], pin:''},
+                    {name: 'GLO', value : ['100','200','500','1000'], pin:''},
+                    {name: '9Mobile', value :['100','200','500','1000'], pin:''},
+                    {name: 'Airtel', value : ['100','200','500','1000'], pin:''}
+                ];
+
+        let display = document.getElementById('network');
+        let display2 = document.getElementById('amount');
+        let pn = document.getElementById('pin');
+        let screen = document.getElementById('screen');
+        let seenPin = false;
+        
+        let on=(params)=>{
+            if(params == 'on'){
+                displayHome.hidden = false;
+                displayHome.hidden = '';
+            }
+        }
+        let off=()=>{
+            displayHome.hidden = true;
+        }
+        let callLogDisplay=(params)=>{
+            if(params == 'call'){
+                displayCallLog.hidden = false;
+                
+            }
+        }
+        
+        let dailNumber=(params)=>{
+            if(params == 'number'){
+                displayPhone.hidden = false;
+            }
+        }
+        let backCallLog=(params)=>{
+            if(params == 'call'){
+                displayPhone.hidden = true
+            }
+        }
+        let backCall=(params)=>{
+            if(params == 'call'){
+                displayCallLog.hidden = true;
+            }
+        }
+
+        let number=(digits)=>{
+            document.getElementById('panel').innerHTML += `${digits}`
+        }
+
+        // let inputOne=(params)=>{
+        //     if(params == 'one'){
+        //         displayNumber.innerText = panel.value;
+        //     }
+        // }
+
+        let endCallOne=(params)=>{
+            if(params == 'one'){
+                dialOne.hidden = true;
+            }
+        }
+        let endCallTwo=(params)=>{
+            if(params == 'two'){
+                dialTwo.hidden = true;
+            }
+        }
+        // let a = new Date
+        // document.getElementById('time').innerText = `${a.getHours()} : ${a.getMinutes()}`;
+
+        // let home = document.getElementById('home')
+        // function on(){
+        //     home.
+        // }
+        let displayMessage=()=>{
+            showMessage.hidden = false;
+            showMessage.hidden = '';
+        }
+        let send=()=>{
+            msgScreen.innerHTML += `<div class='view-msg'><p>${inputMsg.value}</p></div>`
+            inputMsg.value = '';
+        }
+        
+
+        if(localStorage.getItem('voucher')){
+            let p = localStorage.getItem('voucher')
+            newVoucherArr = JSON.parse(p);
+        }
+        
+            
+        function voucherDetails(){
+            for(i=0; i<voucher.length; i++){
+
+                display.innerHTML += `<option>${voucher[i].name}</option>`;
+                console.log(voucher[i].name);
+            }
+        }
+        let tableDisplay=()=>{
+            table.innerHTML = `<th>S/N</th><th>NETWORK</th><th>AMOUNT</th><th>PIN NUMBER</th><th>STATUS</th>`;
+            for(let d=0; d<newVoucherArr.length; d++){
+                table.innerHTML += `<td>${d+1}</td><td>${newVoucherArr[d].name}</td><td>${newVoucherArr[d].value}</td><td>${newVoucherArr[d].pin}</td><td>${newVoucherArr[d].status}</td>`
+            }
+        }
+
+        function voucherValue(){
+            for(let i=0; i<voucher.length; i++){
+                let a = voucher[i].value;
+                display2.innerHTML += `<option>${a[i]}</option>`;
+                console.log(a[i]);
+            }
+        }
+
+        function add(){
+            let n = document.getElementById('network').value;
+            let o = document.getElementById('amount').value;
+            let p = document.getElementById('pin').value;
+
+            let newVoucher = {name: n, value : o, pin:p, status:'false'};
+            newVoucherArr.push(newVoucher);
+            console.log(newVoucher);
+
+            localStorage.setItem('voucher', JSON.stringify(newVoucherArr));
+            let m = localStorage.getItem('voucher');
+            console.log(JSON.parse(m));
+            tableDisplay();
+        }
+
+        function gen(params){
+            for(b=0; b<voucher.length; b++){
+                let a = Math.floor(Math.random()*10000000000000000)
+                pn.value = a;
+                console.log(a);
+ 
+            }
+        }
+
+        
+        function load(params){
+            for(let i=0; i<newVoucherArr.length; i++){
+                let b = newVoucherArr[i];
+                if(document.getElementById('panel').value == b.pin){
+                    document.getElementById('card').hidden = false;
+                    document.getElementById('card').hidden = ''; 
+                    b.status = true;
+                    seenPin = true;
+                    console.log('Card loaded successfully');
+                    for(let a=0; a < newVoucherArr.length; a++){
+                        document.getElementById('card').innerText = `Your account recharge of #${newVoucherArr[a].value}.00 
+                        was successfully.`
+                    }
+                    localStorage.setItem('newVoucherArr', JSON.stringify(newVoucherArr))
+                    seenPin = false
+                    break
+                }
+                if(i==newVoucherArr.length-1 && seenPin==false){
+                    console.log(('invalid Pin'));
+                    for(let a=0; a < newVoucherArr.length; a++){
+                        document.getElementById('card').innerText = `Sorry recharge of #${newVoucherArr[a].value} 
+                        was not successfully loaded.`
+                    }
+                }
+
+                
+            }
+            if(params == 'one'){
+                dialOne.hidden = false;
+                displayNumber.innerHTML = `${panel.value}`;
+                console.log(panel.value);
+                dialOne.hidden = '';
+            }
+            if(params == "two"){
+                dialTwo.hidden = false;
+                displayNumber.innerHTML = `${panel.value}`;
+                dialTwo.hidden = ''
+            }
+        }
+        
+        voucherDetails();
+        voucherValue();
+        tableDisplay();
+        
+    </script>
+</body>
+</html>
